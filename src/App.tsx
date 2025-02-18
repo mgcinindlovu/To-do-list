@@ -173,7 +173,7 @@ const App: React.FC = () => {
 // Styling
 const containerStyle: React.CSSProperties = {
   textAlign: "center",
-  padding: "20px",
+  padding: "10px",
 };
 
 const headerStyle: React.CSSProperties = {
@@ -183,7 +183,8 @@ const headerStyle: React.CSSProperties = {
 const appStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "center",
-  gap: "20px",
+  gap: "10px",
+ 
 };
 
 const cardStyle: React.CSSProperties = {
@@ -194,7 +195,7 @@ const cardStyle: React.CSSProperties = {
   borderRadius: "10px",
   justifyContent: 'center',
   alignItems: 'center',
-  
+  marginBottom: "20px",
 };
 
 const splashStyle: React.CSSProperties = {
@@ -251,5 +252,18 @@ const buttonStyle: React.CSSProperties = {
   borderRadius: "5px",
   cursor: "pointer",
 };
+
+// Media Queries for responsiveness
+const responsiveStyles = `
+  @media (max-width: 768px) {
+    .cardStyle {
+      width: 90%;  // Stack cards on small screens
+      margin-bottom: 20px;
+    }
+    .appStyle {
+      flex-direction: column;
+    }
+  }
+`;
 
 export default App;
